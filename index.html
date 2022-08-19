@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Lokaal!</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./img/favicon/safari-pinned-tab.svg"
+      color="#eb931e"
+    />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="./img/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script defer src="./scripts/leaflet-color-markers.js"></script>
+    <script defer src="./scripts/xml2js.min.js"></script>
+    <script defer src="./scripts/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="c-header">
+        <section class="o-title">
+          <h1>Shop Lokaal!</h1>
+        </section>
+        <section class="o-companies">
+          <form action="#">
+            <label for="companylist">Zoek een buurtwinkel of supermarkt</label>
+            <input
+              class="c-input js-input"
+              list="companylistdata"
+              name="companylist"
+              id="companylist"
+              placeholder="Zoek ..."
+            />
+            <datalist
+              id="companylistdata"
+              class="c-companylist-data js-companylist-data"
+            ></datalist>
+          </form>
+        </section>
+        <section class="o-return">
+          <button class="c-button js-return">Waar ben ik?</button>
+          <button class="c-button c-button-primary js-change-map">
+            Dark mode
+          </button>
+        </section>
+      </div>
+    </header>
+    <main>
+      <div id="map"></div>
+    </main>
+  </body>
+</html>

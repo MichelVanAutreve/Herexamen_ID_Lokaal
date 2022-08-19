@@ -1,0 +1,202 @@
+/*------------------------------------*\
+#FONTS
+\*------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&display=swap");
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+:root {
+  --global-color-neutral-100: #fafafa;
+  --global-color-neutral-900: #1e1e1e;
+  --global-color-primary: #eb931e;
+  --global-color-primary--light: #ffd69d;
+  --global-color-secondary: #df4c43;
+
+  --global-font-weight--regular: 400;
+  --global-font-weight--medium: 500;
+  --global-font-weight--semibold: 600;
+
+  --global-font-size--small: 1.4rem;
+  --global-font-size--base: 1.6rem;
+
+  --global-border-radius--small: 0.3rem;
+  --global-border-radius--base: 0.5rem;
+
+  --global-outline__focus: 2px solid var(--global-color-secondary);
+}
+/*------------------------------------*\
+#GENERIC
+\*------------------------------------*/
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+  font-family: "inter", sans-serif;
+  color: var(--global-color-neutral-100);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  max-width: 100vw;
+}
+
+body {
+  position: relative;
+}
+
+body > header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  margin-left: 6rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  background: var(--global-color-secondary);
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: var(--global-color-secondary);
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+#Elements
+\*------------------------------------*/
+
+h1,
+h2,
+h3 {
+  font-weight: var(--global-font-weight--semibold);
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: var(--global-font-weight--semibold);
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+label {
+  font-size: var(--global-font-size--small);
+}
+
+/*------------------------------------*\
+#OBJECTS
+\*------------------------------------*/
+.o-title,
+.o-companies {
+  border-bottom: 1px solid rgba(225, 225, 225, 0.4);
+}
+
+.o-return,
+.o-companies {
+  padding: 2rem 2rem;
+}
+
+.o-title {
+  padding: 1rem 2rem;
+}
+
+.o-return {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+/*------------------------------------*\
+#COMPONENTS
+\*------------------------------------*/
+.c-input {
+  width: 100%;
+  background-color: var(--global-color-neutral-100);
+  border: none;
+  font-size: var(--global-font-size--base);
+  padding: 1rem 2rem;
+  border-radius: var(--global-border-radius--small);
+}
+
+.c-input:focus {
+  outline: var(--global-outline__focus);
+}
+
+.c-companylist {
+  width: auto;
+  background-color: var(--global-color-neutral-100);
+}
+
+#map {
+  position: relative;
+  height: 100vh;
+}
+
+.c-companylist-data__address {
+  border-bottom: 0.4rem solid var(--global-color-primary);
+}
+
+.c-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--global-color-primary);
+  border-radius: var(--global-border-radius--base);
+  margin-top: 1rem;
+  max-width: 35rem;
+  width: 75%;
+}
+
+.c-button {
+  background-color: var(--global-color-primary--light);
+  color: var(--global-color-neutral-900);
+  font-family: "Inter", sans-serif;
+  font-weight: var(--global-font-weight--medium);
+  font-size: var(--global-font-size--small);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--global-border-radius--small);
+  transition: all 0.1s ease;
+}
+
+.c-button:focus {
+  outline: var(--global-outline__focus);
+}
+
+.c-button:hover {
+  background-color: var(--global-color-secondary);
+  color: var(--global-color-neutral-100);
+}
+
+.c-button:active {
+  background-color: var(--global-color-neutral-100);
+  color: var(--global-color-secondary);
+}
